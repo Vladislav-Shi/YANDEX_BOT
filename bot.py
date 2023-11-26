@@ -2,7 +2,7 @@ import os
 from typing import Type
 
 import telebot
-from filters import BlueFilter, Filter, GreenFilter, InverseFilter, RedFilter
+from filters import BlueFilter, Filter, GreenFilter, InverseFilter, RedFilter, ShinyFilter
 from PIL import Image
 from telebot.types import KeyboardButton, ReplyKeyboardMarkup, Message
 from dotenv import load_dotenv
@@ -17,6 +17,7 @@ filters: dict[str, Type[Filter]] = {
     "Зеленый фильтр": GreenFilter(),
     "Синий фильтр": BlueFilter(),
     "Инверсия": InverseFilter(),
+    "ShinyFilter": ShinyFilter(),
 }
 
 # Словарь для хранения последней пользовательской картинки
